@@ -1,1 +1,0 @@
-Training and solving practical problems.
