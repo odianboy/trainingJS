@@ -21,7 +21,7 @@ switch (browser) {
 }
  */
 
-let nameBrowser = prompt('Введите название браузера', '')
+const nameBrowser = prompt('Введите название браузера', '')
 
 if (nameBrowser === 'Edge') {
     alert('Youve got the Edge!');
