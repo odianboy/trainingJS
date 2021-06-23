@@ -8,11 +8,17 @@
 Функция должна быть нечувствительна к регистру.
  */
 
-function checkSpam(str) {
+let forbiddenWords = ['viagra', 'xxx']
+
+function checkSpam(str, arr) {
     let word = str.toLowerCase();
 
-    return word.includes('viagra') || word.includes('xxx');
-
+    for (let value of arr) {
+        if (word.includes(value)) {
+            return value
+        }
+    }
+    return console.log('Совпадений не найдено!')
 }
 
-alert( checkSpam('innocent rabbit') );
+console.log( checkSpam('fgfgxxx', forbiddenWords) );
