@@ -14,20 +14,11 @@ let masha = { name: "Маша", surname: "Петрова", id: 3 };
 
 let users = [ vasya, petya, masha ];
 
-let usersMapped = JSON.parse( JSON.stringify( users ) );
-
-usersMapped.map(item => item.fullName = item.name + ' ' + item.surname);
-usersMapped.map(item => delete item.name);
-usersMapped.map(item => delete item.surname);
-
-console.log( usersMapped[0].id ); // 1
-console.log( usersMapped[0].fullName ); // Вася Пупкин
-
-/*
-Решение учебника:
 
 let usersMapped = users.map(user => ({
     fullName: `${user.name} ${user.surname}`,
     id: user.id
 }));
- */
+
+console.log( usersMapped[0].id ); // 1
+console.log( usersMapped[0].fullName ); // Вася Пупкин
